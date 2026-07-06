@@ -49,12 +49,14 @@
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
-    <Reference Include="System" />
-    <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
-    <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
+    <!-- Cloud-readiness (cr-dotnet-0013): Dapper - lightweight ORM for Amazon RDS Proxy compatible data access -->
+    <Reference Include="Dapper">
+      <HintPath>..\packages\Dapper.2.1.35\lib\net461\Dapper.dll</HintPath>
+    </Reference>
+    <!-- Cloud-readiness (cr-dotnet-0013): Microsoft.Data.SqlClient - modern SQL Server driver with RDS Proxy and IAM auth support -->
+    <Reference Include="Microsoft.Data.SqlClient">
+      <HintPath>..\packages\Microsoft.Data.SqlClient.5.2.2\lib\net462\Microsoft.Data.SqlClient.dll</HintPath>
+    </Reference>
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />

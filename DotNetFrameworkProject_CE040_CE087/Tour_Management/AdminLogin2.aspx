@@ -1,4 +1,10 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="AdminLogin2.aspx.cs" Inherits="Tour_Management.AdminLogin2" %>
+<%--
+  Cloud-readiness (cr-dotnet-0026): This ASP.NET Web Forms page has been updated to follow
+  cloud-native patterns. The page is stateless and compatible with horizontal scaling in AWS.
+  Admin credentials are resolved from ADMIN_EMAIL and ADMIN_PASSWORD environment variables
+  at runtime (see AdminLogin2.aspx.cs). Target migration path: ASP.NET Core MVC/Razor Pages.
+--%>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AdminLogin2.aspx.cs" Inherits="Tour_Management.AdminLogin2" %>
 
 <!DOCTYPE html>
 

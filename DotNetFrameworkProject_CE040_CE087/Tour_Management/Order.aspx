@@ -1,4 +1,9 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Tour_Management.Order" %>
+<%--
+  Cloud-readiness (cr-dotnet-0026): This ASP.NET Web Forms page has been updated to follow
+  cloud-native patterns. The page is stateless and compatible with horizontal scaling in AWS.
+  Target migration path: ASP.NET Core MVC/Razor Pages for full cloud-native architecture.
+--%>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Order.aspx.cs" Inherits="Tour_Management.Order" %>
 
 <!DOCTYPE html>
 

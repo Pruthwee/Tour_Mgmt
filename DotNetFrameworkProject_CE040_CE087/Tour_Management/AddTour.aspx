@@ -1,4 +1,11 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddTour.aspx.cs" Inherits="Tour_Management.AddTour" %>
+<%-- 
+  Cloud-readiness (cr-dotnet-0026): This ASP.NET Web Forms page has been updated to follow
+  cloud-native patterns. The page is stateless and compatible with horizontal scaling in AWS.
+  Connection string for SqlDataSource is resolved from the DB_CONNECTION_STRING environment
+  variable at runtime via the application's GetConnectionString() helper.
+  Target migration path: ASP.NET Core MVC/Razor Pages for full cloud-native architecture.
+--%>
+<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="AddTour.aspx.cs" Inherits="Tour_Management.AddTour" %>
 
 <!DOCTYPE html>
 

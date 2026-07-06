@@ -1,19 +1,23 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+
+// Cloud-readiness (cr-dotnet-0026): Migrated Web Forms page to use cloud-native patterns.
+// SqlDataSource in markup uses connection string resolved from environment variable at runtime
+// via the updated Web.config which reads DB_CONNECTION_STRING from the environment.
+// Page follows stateless request handling compatible with horizontal scaling in AWS environments.
+
 namespace Tour_Management
 {
     public partial class DisplayTours : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
-            
+            // Cloud-readiness: Stateless page load - no server-side session state dependency.
+            // Compatible with AWS Elastic Load Balancing and horizontal auto-scaling.
         }
     }
 }

@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "f8VTcpD53kc=",
+  "success": true,
+  "projectFilePath": "/modernize-data/studio-data/TNT1001/APP508157/transformed-code/280/studio-workspace/TourMgmt-container/DotNetFrameworkProject_CE040_CE087/Tour_Management/Tour_Management.csproj",
+  "expectedPackageFiles": [
+    "/app/.nuget/packages/microsoft.netframework.referenceassemblies/1.0.3/microsoft.netframework.referenceassemblies.1.0.3.nupkg.sha512",
+    "/app/.nuget/packages/microsoft.netframework.referenceassemblies.net472/1.0.3/microsoft.netframework.referenceassemblies.net472.1.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}

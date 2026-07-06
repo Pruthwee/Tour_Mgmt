@@ -1,0 +1,89 @@
+# .NET Framework / ASP.NET Web Application - Docker Ignore File
+# Excludes build artifacts, IDE files, and sensitive data from Docker build context
+
+# Build output directories
+bin/
+obj/
+publish/
+
+# Visual Studio files
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+# VS Code files
+.vscode/
+
+# Rider IDE files
+.idea/
+
+# NuGet packages (restored during build)
+packages/
+*.nupkg
+
+# Build artifacts
+*.dll
+*.pdb
+*.exe
+!ServiceMonitor.exe
+
+# Temporary files
+*.tmp
+*.temp
+*~
+
+# Log files
+*.log
+logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# Documentation
+*.md
+docs/
+
+# Test projects
+*Tests/
+*Test/
+*.Tests/
+
+# CI/CD files
+.github/
+.gitlab-ci.yml
+azure-pipelines.yml
+Jenkinsfile
+
+# Scripts (not needed in container)
+scripts/
+kubernetes/
+
+# Environment files
+.env
+.env.*
+*.env
+
+# Sensitive configuration (use environment variables instead)
+# Web.config is needed for the application
+# Web.Debug.config and Web.Release.config are transform files
+
+# Database files (use external SQL Server)
+App_Data/*.mdf
+App_Data/*.ldf
+
+# Compiled Razor views (will be recompiled)
+*.compiled
+
+# Backup files
+*.bak
+*.backup

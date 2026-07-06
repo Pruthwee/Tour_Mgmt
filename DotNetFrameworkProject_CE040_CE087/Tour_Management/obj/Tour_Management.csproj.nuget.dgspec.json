@@ -1,0 +1,52 @@
+{
+  "format": 1,
+  "restore": {
+    "/modernize-data/studio-data/TNT1001/APP508157/transformed-code/280/studio-workspace/TourMgmt-container/DotNetFrameworkProject_CE040_CE087/Tour_Management/Tour_Management.csproj": {}
+  },
+  "projects": {
+    "/modernize-data/studio-data/TNT1001/APP508157/transformed-code/280/studio-workspace/TourMgmt-container/DotNetFrameworkProject_CE040_CE087/Tour_Management/Tour_Management.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/modernize-data/studio-data/TNT1001/APP508157/transformed-code/280/studio-workspace/TourMgmt-container/DotNetFrameworkProject_CE040_CE087/Tour_Management/Tour_Management.csproj",
+        "projectName": "Tour_Management",
+        "projectPath": "/modernize-data/studio-data/TNT1001/APP508157/transformed-code/280/studio-workspace/TourMgmt-container/DotNetFrameworkProject_CE040_CE087/Tour_Management/Tour_Management.csproj",
+        "packagesPath": "/app/.nuget/packages/",
+        "outputPath": "/modernize-data/studio-data/TNT1001/APP508157/transformed-code/280/studio-workspace/TourMgmt-container/DotNetFrameworkProject_CE040_CE087/Tour_Management/obj/",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "/app/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net472"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net472": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net472": {
+          "dependencies": {
+            "Microsoft.NETFramework.ReferenceAssemblies": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[1.0.3, )"
+            }
+          }
+        }
+      }
+    }
+  }
+}

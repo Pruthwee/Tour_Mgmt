@@ -1,0 +1,33 @@
+version: "3.8"
+
+services:
+  tour-management:
+    image: tour-management:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:80"
+    environment:
+      - ASPNET_ENV=Production
+      - TOUR_MANAGEMENT_ENV=Production
+      - DB_CONNECTION_STRING=${DB_CONNECTION_STRING:-Data Source=sqlserver;Initial Catalog=tourdb;User ID=sa;Password=YourPassword123!}
+    volumes:
+      - tour-logs:C:\inetpub\logs
+    networks:
+      - app-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "powershell", "-Command", "try { $response = Invoke-WebRequest -Uri 'http://localhost/HealthCheck.ashx' -UseBasicParsing -TimeoutSec 5; if ($response.StatusCode -eq 200) { exit 0 } else { exit 1 } } catch { exit 1 }"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 60s
+
+volumes:
+  tour-logs:
+    driver: local
+
+networks:
+  app-network:
+    driver: nat

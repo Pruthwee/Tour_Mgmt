@@ -1,0 +1,44 @@
+@page
+@model Tour_Management.Web.Pages.Users.IndexModel
+@{
+    ViewData["Title"] = "All Users";
+}
+
+<h1>All Users</h1>
+<hr />
+
+@if (!Model.Users.Any())
+{
+    <div class="alert alert-info">No users found.</div>
+}
+else
+{
+    <table class="table table-striped table-hover">
+        <thead class="table-dark">
+            <tr>
+                <th>ID</th>
+                <th>Email</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td>@user.UserInfoId</td>
+                    <td>@user.Email</td>
+                    <td>@user.FirstName</td>
+                    <td>@user.LastName</td>
+                    <td>@user.City</td>
+                    <td>
+                        <a asp-page="./Edit" asp-route-id="@user.UserInfoId" class="btn btn-primary btn-sm">Edit</a>
+                        <a asp-page="./Delete" asp-route-id="@user.UserInfoId" class="btn btn-danger btn-sm">Delete</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,37 @@
+@page
+@model Tour_Management.Web.Pages.Users.ProfileModel
+@{
+    ViewData["Title"] = "My Profile";
+}
+
+<h1>My Profile</h1>
+<hr />
+
+@if (Model.UserProfile != null)
+{
+    <dl class="row">
+        <dt class="col-sm-3">Email</dt>
+        <dd class="col-sm-9">@Model.UserProfile.Email</dd>
+        <dt class="col-sm-3">First Name</dt>
+        <dd class="col-sm-9">@Model.UserProfile.FirstName</dd>
+        <dt class="col-sm-3">Last Name</dt>
+        <dd class="col-sm-9">@Model.UserProfile.LastName</dd>
+        <dt class="col-sm-3">Gender</dt>
+        <dd class="col-sm-9">@Model.UserProfile.Gender</dd>
+        <dt class="col-sm-3">Date of Birth</dt>
+        <dd class="col-sm-9">@(Model.UserProfile.Dob?.ToString("dd/MM/yyyy") ?? "N/A")</dd>
+        <dt class="col-sm-3">Street</dt>
+        <dd class="col-sm-9">@Model.UserProfile.Street</dd>
+        <dt class="col-sm-3">City</dt>
+        <dd class="col-sm-9">@Model.UserProfile.City</dd>
+        <dt class="col-sm-3">State</dt>
+        <dd class="col-sm-9">@Model.UserProfile.State</dd>
+    </dl>
+
+    <a asp-page="./Edit" asp-route-id="@Model.UserProfile.UserInfoId" class="btn btn-primary">Edit Profile</a>
+    <a asp-page="/Bookings/MyBookings" class="btn btn-info ms-2">My Bookings</a>
+}
+else
+{
+    <div class="alert alert-warning">Profile not found.</div>
+}

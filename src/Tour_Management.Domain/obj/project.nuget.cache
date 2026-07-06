@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "Kj2lEdPGXX4=",
+  "success": true,
+  "projectFilePath": "/modernize-data/studio-data/TNT1001/APP983343/transformed-code/276/studio-workspace/upgrade-Tour_Mgmt/src/Tour_Management.Domain/Tour_Management.Domain.csproj",
+  "expectedPackageFiles": [
+    "/app/.nuget/packages/microsoft.netcore.app.ref/8.0.16/microsoft.netcore.app.ref.8.0.16.nupkg.sha512",
+    "/app/.nuget/packages/microsoft.aspnetcore.app.ref/8.0.16/microsoft.aspnetcore.app.ref.8.0.16.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,47 @@
+@page
+@model Tour_Management.Web.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="jumbotron text-center py-5" style="background-color: #343a40; color: white; border-radius: 8px;">
+    <h1 class="display-4">Welcome to Tour Management</h1>
+    <p class="lead">Discover amazing tours and book your next adventure!</p>
+    <hr class="my-4" style="border-color: white;" />
+    <a class="btn btn-warning btn-lg" asp-page="/Tours/Index">Browse Tours</a>
+    @if (HttpContext.Session.GetString("UserEmail") == null)
+    {
+        <a class="btn btn-outline-light btn-lg ms-2" asp-page="/Users/Login">Login</a>
+        <a class="btn btn-outline-light btn-lg ms-2" asp-page="/Users/Register">Sign Up</a>
+    }
+</div>
+
+<div class="row mt-5">
+    <div class="col-md-4 text-center">
+        <div class="card h-100 shadow">
+            <div class="card-body">
+                <h3 class="card-title">&#127758; Explore Destinations</h3>
+                <p class="card-text">Browse our wide selection of tour packages to amazing destinations.</p>
+                <a asp-page="/Tours/Index" class="btn btn-primary">View Tours</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 text-center">
+        <div class="card h-100 shadow">
+            <div class="card-body">
+                <h3 class="card-title">&#128197; Easy Booking</h3>
+                <p class="card-text">Book your dream tour in just a few simple steps.</p>
+                <a asp-page="/Users/Register" class="btn btn-success">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 text-center">
+        <div class="card h-100 shadow">
+            <div class="card-body">
+                <h3 class="card-title">&#128203; Manage Bookings</h3>
+                <p class="card-text">View and manage all your tour bookings in one place.</p>
+                <a asp-page="/Bookings/MyBookings" class="btn btn-info">My Bookings</a>
+            </div>
+        </div>
+    </div>
+</div>

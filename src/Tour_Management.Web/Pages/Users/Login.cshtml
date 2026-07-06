@@ -1,0 +1,51 @@
+@page
+@model Tour_Management.Web.Pages.Users.LoginModel
+@{
+    ViewData["Title"] = "User Login";
+    Layout = "_Layout";
+}
+
+<div class="row justify-content-center">
+    <div class="col-md-5">
+        <div class="card shadow mt-4">
+            <div class="card-header bg-dark text-white text-center">
+                <h3>User Login</h3>
+            </div>
+            <div class="card-body">
+                @if (TempData["ErrorMessage"] != null)
+                {
+                    <div class="alert alert-danger">@TempData["ErrorMessage"]</div>
+                }
+                @if (TempData["SuccessMessage"] != null)
+                {
+                    <div class="alert alert-success">@TempData["SuccessMessage"]</div>
+                }
+
+                <form method="post">
+                    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+                    <div class="mb-3">
+                        <label asp-for="Login.Email" class="form-label"></label>
+                        <input asp-for="Login.Email" class="form-control" type="email" />
+                        <span asp-validation-for="Login.Email" class="text-danger"></span>
+                    </div>
+
+                    <div class="mb-3">
+                        <label asp-for="Login.Password" class="form-label"></label>
+                        <input asp-for="Login.Password" class="form-control" type="password" />
+                        <span asp-validation-for="Login.Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="d-grid gap-2">
+                        <button type="submit" class="btn btn-warning">Login</button>
+                        <a asp-page="./Register" class="btn btn-outline-secondary">Sign Up</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

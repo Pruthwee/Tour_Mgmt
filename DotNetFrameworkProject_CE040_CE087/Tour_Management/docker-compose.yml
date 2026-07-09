@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  tour-management:
+    image: tour-management:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Production
+      - DB_CONNECTION_STRING=Server=tcp:sql-server;Database=tourdb;User ID=sa;Password=YourPassword;
+    volumes:
+      - ./config:/inetpub/wwwroot/config
+      - ./logs:/inetpub/wwwroot/logs
+    healthcheck:
+      test: ["CMD", "powershell", "-Command", "Invoke-WebRequest -Uri http://localhost/HealthCheck.aspx -UseBasicParsing"]
+      interval: 30s
+      timeout: 10s
+      retries: 3

@@ -21,9 +21,7 @@ namespace Tour_Management
             }
         }
         public void refreshdata()
-        {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
-            conn.Open();
+            SqlConnection conn = new SqlConnection(Environment.GetEnvironmentVariable("DB_CONNECTION_STRING") ?? ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
             string insertQuery = "select * from Tour";
             SqlCommand com = new SqlCommand(insertQuery, conn);
           // GridView1.DataSource = insertQuery;

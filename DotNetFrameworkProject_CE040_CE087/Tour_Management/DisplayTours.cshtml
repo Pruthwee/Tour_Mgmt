@@ -1,0 +1,68 @@
+@page
+@model Tour_Management.Pages.DisplayToursModel
+@{
+    ViewData["Title"] = "Display Tours";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Display Tours</title>
+    <style type="text/css">
+        .tour-table {
+            margin-right: 130px;
+            margin-top: 21px;
+            margin-left: 13px;
+            width: 875px;
+            border-collapse: collapse;
+            border: 1px solid #DEDFDE;
+        }
+        .tour-table th {
+            background-color: #6B696B;
+            color: white;
+            font-weight: bold;
+            padding: 4px;
+            border: 1px solid #DEDFDE;
+        }
+        .tour-table td {
+            padding: 4px;
+            border: 1px solid #DEDFDE;
+            text-align: center;
+        }
+        .tour-table tr:nth-child(even) {
+            background-color: #F7F7DE;
+        }
+    </style>
+</head>
+<body>
+    <table class="tour-table">
+        <thead>
+            <tr>
+                <th>TOUR_NAME</th>
+                <th>DAYS</th>
+                <th>LOCATIONS</th>
+                <th>TOUR_ID</th>
+                <th>pic</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tour in Model.Tours)
+            {
+                <tr>
+                    <td>@tour.TOUR_NAME</td>
+                    <td>@tour.DAYS</td>
+                    <td>@tour.LOCATIONS</td>
+                    <td>@tour.TOUR_ID</td>
+                    <td>
+                        <img src="~/Tour_pics/@tour.pic" style="width:200px;height:200px" />
+                    </td>
+                    <td>
+                        <a asp-page="/Order">Book Now</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

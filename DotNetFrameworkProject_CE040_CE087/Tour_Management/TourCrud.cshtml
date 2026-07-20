@@ -1,0 +1,73 @@
+@page
+@model Tour_Management.Pages.TourCrudModel
+@{
+    ViewData["Title"] = "Manage Tours";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Manage Tours</title>
+    <style>
+        .tour-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #DEDFDE;
+        }
+        .tour-table th {
+            background-color: #6B696B;
+            color: white;
+            font-weight: bold;
+            padding: 4px;
+            border: 1px solid #DEDFDE;
+        }
+        .tour-table td {
+            padding: 4px;
+            border: 1px solid #DEDFDE;
+            text-align: center;
+        }
+        .tour-table tr:nth-child(even) {
+            background-color: #F7F7DE;
+        }
+    </style>
+</head>
+<body>
+    <table class="tour-table">
+        <thead>
+            <tr>
+                <th>TOUR_ID</th>
+                <th>TOUR_NAME</th>
+                <th>PLACE</th>
+                <th>DAYS</th>
+                <th>PRICE</th>
+                <th>LOCATIONS</th>
+                <th>TOUR_INFO</th>
+                <th>pic</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var tour in Model.Tours)
+            {
+                <tr>
+                    <td>@tour.TOUR_ID</td>
+                    <td>@tour.TOUR_NAME</td>
+                    <td>@tour.PLACE</td>
+                    <td>@tour.DAYS</td>
+                    <td>@tour.PRICE</td>
+                    <td>@tour.LOCATIONS</td>
+                    <td>@tour.TOUR_INFO</td>
+                    <td>
+                        <img src="~/Tour_pics/@tour.pic" style="width:150px;height:150px" />
+                    </td>
+                    <td>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@tour.TOUR_ID">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

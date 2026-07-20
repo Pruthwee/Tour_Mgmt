@@ -1,0 +1,58 @@
+@page
+@model Tour_Management.Pages.OrderModel
+@{
+    ViewData["Title"] = "Confirm Tour";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Confirm Tour</title>
+    <style>
+        .container {
+            text-align: center;
+            background-color: black;
+            width: 100%;
+            font-size: 30px;
+            color: white;
+            padding-bottom: 150px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="page-header">
+            <h1>Confirm Tour</h1>
+        </div>
+        <div class="form-horizontal">
+            <form method="post">
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Your Name</label></div>
+                    <div class="col-sm-6"><input asp-for="Name" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Your City</label></div>
+                    <div class="col-sm-6"><input asp-for="City" class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Tour Name</label></div>
+                    <div class="col-sm-6"><input asp-for="TourName" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Mobile Number</label></div>
+                    <div class="col-sm-6"><input asp-for="Number" required type="number" class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">
+                        <button type="submit" class="btn btn-primary" style="background-color:#cc6600; color:black;">Register</button>
+                    </div>
+                    <div class="control-label col-sm-2">
+                        <button type="reset" class="btn btn-secondary" style="background-color:#cc6600; color:black;">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

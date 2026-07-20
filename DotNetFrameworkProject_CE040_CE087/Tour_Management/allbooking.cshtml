@@ -1,0 +1,59 @@
+@page
+@model Tour_Management.Pages.AllBookingModel
+@{
+    ViewData["Title"] = "All Bookings";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>All Bookings</title>
+    <style>
+        .booking-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #DEDFDE;
+        }
+        .booking-table th {
+            background-color: #6B696B;
+            color: white;
+            font-weight: bold;
+            padding: 4px;
+            border: 1px solid #DEDFDE;
+        }
+        .booking-table td {
+            padding: 4px;
+            border: 1px solid #DEDFDE;
+            text-align: center;
+        }
+        .booking-table tr:nth-child(even) {
+            background-color: #F7F7DE;
+        }
+    </style>
+</head>
+<body>
+    <table class="booking-table">
+        <thead>
+            <tr>
+                <th>TOUR_ID</th>
+                <th>TOUR_NAME</th>
+                <th>PLACE</th>
+                <th>Email</th>
+                <th>FirstName</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in Model.Bookings)
+            {
+                <tr>
+                    <td>@booking.TOUR_ID</td>
+                    <td>@booking.TOUR_NAME</td>
+                    <td>@booking.PLACE</td>
+                    <td>@booking.Email</td>
+                    <td>@booking.FirstName</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

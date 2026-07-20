@@ -1,0 +1,61 @@
+@page
+@model Tour_Management.Pages.MyBookingModel
+@{
+    ViewData["Title"] = "Your Current Booking";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Your Current Booking</title>
+    <style>
+        .booking-table {
+            width: 546px;
+            margin-top: 96px;
+            border-collapse: collapse;
+            border: 1px solid #DEDFDE;
+        }
+        .booking-table th {
+            background-color: #6B696B;
+            color: white;
+            font-weight: bold;
+            padding: 4px;
+            border: 1px solid #DEDFDE;
+        }
+        .booking-table td {
+            padding: 4px;
+            border: 1px solid #DEDFDE;
+            text-align: center;
+        }
+        .booking-table tr:nth-child(even) {
+            background-color: #F7F7DE;
+        }
+    </style>
+</head>
+<body style="text-align:center">
+    <h1>YOUR CURRENT BOOKING</h1>
+    <table class="booking-table" style="margin: 0 auto;">
+        <thead>
+            <tr>
+                <th>TOUR_NAME</th>
+                <th>ID</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var booking in Model.Bookings)
+            {
+                <tr>
+                    <td>@booking.TOUR_NAME</td>
+                    <td>@booking.TOUR_ID</td>
+                    <td>
+                        <form method="post" asp-page-handler="Delete" asp-route-id="@booking.TOUR_ID">
+                            <button type="submit" class="btn btn-danger">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

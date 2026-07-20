@@ -1,0 +1,35 @@
+@page
+@model Tour_Management.Pages.AdminLogin2Model
+@{
+    ViewData["Title"] = "Admin Login";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Login</title>
+    <style>
+         .container {
+            text-align: center;
+            background-color: black;
+            width: 100%;
+            font-size: 30px;
+            color: white;
+            padding-bottom: 150px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Admin Login</h1>
+        <form method="post">
+            <label>Email</label><br />
+            <input asp-for="Email" /><br />
+            <label>password</label><br />
+            <input asp-for="Password" type="password" /><br />
+            <button type="submit">login</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+@page
+@model Tour_Management.Pages.UserCrudModel
+@{
+    ViewData["Title"] = "User Management";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>User Management</title>
+    <style>
+        .user-table {
+            width: 100%;
+            border-collapse: collapse;
+            border: 1px solid #DEDFDE;
+        }
+        .user-table th {
+            background-color: #6B696B;
+            color: white;
+            font-weight: bold;
+            padding: 4px;
+            border: 1px solid #DEDFDE;
+        }
+        .user-table td {
+            padding: 4px;
+            border: 1px solid #DEDFDE;
+            text-align: center;
+        }
+        .user-table tr:nth-child(even) {
+            background-color: #F7F7DE;
+        }
+    </style>
+</head>
+<body>
+    <table class="user-table">
+        <thead>
+            <tr>
+                <th>Email</th>
+                <th>FirstName</th>
+                <th>LastName</th>
+                <th>Gender</th>
+                <th>Password</th>
+                <th>City</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in Model.Users)
+            {
+                <tr>
+                    <td>@user.Email</td>
+                    <td>@user.FirstName</td>
+                    <td>@user.LastName</td>
+                    <td>@user.Gender</td>
+                    <td>@user.Password</td>
+                    <td>@user.City</td>
+                    <td>
+                        <form method="post" asp-page-handler="Update">
+                            <input type="hidden" asp-for="user.Email" value="@user.Email" />
+                            <input type="text" asp-for="user.FirstName" value="@user.FirstName" />
+                            <input type="text" asp-for="user.LastName" value="@user.LastName" />
+                            <input type="text" asp-for="user.Gender" value="@user.Gender" />
+                            <input type="text" asp-for="user.Password" value="@user.Password" />
+                            <input type="text" asp-for="user.City" value="@user.City" />
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </form>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+</html>

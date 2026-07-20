@@ -1,0 +1,68 @@
+@page
+@model Tour_Management.Pages.UserLoginModel
+@{
+    ViewData["Title"] = "User Login";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>User Login</title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container {
+            text-align: center;
+            background-color: black;
+            width: 100%;
+            font-size: 30px;
+            color: white;
+            padding-bottom: 150px;
+            opacity: 0.8;
+        }
+    </style>
+    <script src="./script.js"></script>
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Rubik:400,700'>
+</head>
+<body>
+    <div class="login-form">
+        <div class="container">
+            <div class="page-header">
+                <h1>User Login</h1>
+            </div>
+            <form method="post">
+                <div class="form-horizontal">
+                    <div class="form-group">
+                        <div class="control-label col-sm-4">
+                            <label>Email</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Email" type="email" required class="form-control" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="control-label col-sm-4">
+                            <label>Password</label>
+                        </div>
+                        <div class="col-sm-6">
+                            <input asp-for="Password" type="password" required class="form-control" />
+                        </div>
+                        
+                        <div class="control-label col-sm-2">
+                            <button type="submit" asp-page-handler="Login" class="btn btn-primary" style="background-color:#cc6600; color:black;">Login</button>
+                        </div>
+                        <div class="control-label col-sm-2">
+                            <button type="submit" asp-page-handler="SignUp" class="btn btn-secondary" style="background-color:#cc6600; color:black;">Sign Up</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

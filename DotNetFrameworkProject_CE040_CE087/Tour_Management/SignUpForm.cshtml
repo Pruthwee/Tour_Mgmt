@@ -1,0 +1,89 @@
+@page
+@model Tour_Management.Pages.SignUpFormModel
+@{
+    ViewData["Title"] = "User Registration Form";
+}
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>User Registration Form</title>
+    <style>
+          .container {
+            text-align: center;
+            background-color: black;
+            width: 100%;
+            font-size: 30px;
+            color: white;
+            padding-bottom:150px;
+            opacity:0.8;
+          }
+    </style>
+</head>
+<body>
+    <br/>
+    <br/>
+    <div class="container">
+        <div class="page-header">
+            <h1>User Registration Form</h1>
+        </div>
+        <div class="form-horizontal">
+            <form method="post">
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Email</label></div>
+                    <div class="col-sm-6"><input asp-for="Email" type="email" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>First Name</label></div>
+                    <div class="col-sm-6"><input asp-for="FirstName" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Last Name</label></div>
+                    <div class="col-sm-6"><input asp-for="LastName" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Gender</label></div>
+                    <div class="col-sm-6">
+                        <select asp-for="Gender" class="form-control">
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Enter Password</label></div>
+                    <div class="col-sm-6"><input asp-for="Password" type="password" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Re-enter Password</label></div>
+                    <div class="col-sm-6"><input asp-for="PasswordConfirm" type="password" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Date of birth(dd-mm-yyyy)</label></div>
+                    <div class="col-sm-6"><input asp-for="Dob" type="date" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>Street</label></div>
+                    <div class="col-sm-6"><input asp-for="Street" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>City</label></div>
+                    <div class="col-sm-6"><input asp-for="City" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-4"><label>State</label></div>
+                    <div class="col-sm-6"><input asp-for="State" required class="form-control" /></div>
+                </div>
+                <div class="form-group">
+                    <div class="control-label col-sm-2">
+                        <button type="submit" class="btn btn-primary" style="background-color:#cc6600; color:black;">Register</button>
+                    </div>
+                    <div class="control-label col-sm-2">
+                        <button type="reset" class="btn btn-secondary" style="background-color:#cc6600; color:black;">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

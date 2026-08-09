@@ -1,0 +1,4 @@
+@page
+@model TourManagement.Web.Pages.Bookings.CreateModel
+@{ ViewData["Title"] = "Create Booking"; }
+<h1>Create Booking</h1><form method="post"><partial name="_BookingForm" for="Input" /><button class="btn btn-primary">Save</button> <a asp-page="Index" class="btn btn-secondary">Cancel</a></form>

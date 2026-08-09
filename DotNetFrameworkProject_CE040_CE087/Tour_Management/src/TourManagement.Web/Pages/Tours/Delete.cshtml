@@ -1,0 +1,4 @@
+@page "{id:int}"
+@model TourManagement.Web.Pages.Tours.DeleteModel
+@{ ViewData["Title"] = "Delete Tour"; }
+<h1>Delete Tour</h1><p>Delete @Model.Tour?.Name?</p><form method="post"><button class="btn btn-danger">Delete</button> <a asp-page="Index" class="btn btn-secondary">Cancel</a></form>

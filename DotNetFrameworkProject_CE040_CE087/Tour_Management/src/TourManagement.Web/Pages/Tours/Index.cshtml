@@ -1,0 +1,6 @@
+@page
+@model TourManagement.Web.Pages.Tours.IndexModel
+@{ ViewData["Title"] = "Tours"; }
+<h1>Tours</h1><p><a class="btn btn-primary" asp-page="Create">Create Tour</a></p>
+<form method="get" class="mb-3"><input name="Search" value="@Model.Search" class="form-control" placeholder="Search tours" /></form>
+<table class="table table-striped"><thead><tr><th>Name</th><th>Place</th><th>Days</th><th>Price</th><th></th></tr></thead><tbody>@foreach (var item in Model.Tours) { <tr><td>@item.Name</td><td>@item.Place</td><td>@item.Days</td><td>@item.Price.ToString("C")</td><td><a asp-page="Details" asp-route-id="@item.Id">Details</a> | <a asp-page="Edit" asp-route-id="@item.Id">Edit</a> | <a asp-page="Delete" asp-route-id="@item.Id">Delete</a></td></tr> }</tbody></table>

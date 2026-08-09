@@ -1,0 +1,4 @@
+@page "{id:int}"
+@model TourManagement.Web.Pages.Bookings.DetailsModel
+@{ ViewData["Title"] = "Booking Details"; }
+<h1>Booking Details</h1><p>Tour: @Model.Booking?.TourName</p><p>Customer: @Model.Booking?.CustomerName (@Model.Booking?.CustomerEmail)</p><p>Status: @Model.Booking?.Status</p><a asp-page="Index" class="btn btn-secondary">Back</a>

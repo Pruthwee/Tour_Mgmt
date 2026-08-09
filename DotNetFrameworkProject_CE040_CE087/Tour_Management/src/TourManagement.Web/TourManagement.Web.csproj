@@ -3,22 +3,16 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <EnableDefaultContentItems>false</EnableDefaultContentItems>
     <RootNamespace>TourManagement.Web</RootNamespace>
     <AssemblyName>TourManagement.Web</AssemblyName>
   </PropertyGroup>
+
   <ItemGroup>
-    <Content Include="src/TourManagement.Web/Pages/**/*.cshtml" LinkBase="Pages" />
-    <Content Include="src/TourManagement.Web/wwwroot/**" LinkBase="wwwroot" />
-    <Content Include="src/TourManagement.Web/appsettings*.json" CopyToOutputDirectory="PreserveNewest" Link="%(Filename)%(Extension)" />
+    <Compile Include="../TourManagement.Domain/**/*.cs" LinkBase="TourManagement.Domain" />
+    <Compile Include="../TourManagement.Application/**/*.cs" LinkBase="TourManagement.Application" />
+    <Compile Include="../TourManagement.Infrastructure/**/*.cs" LinkBase="TourManagement.Infrastructure" />
   </ItemGroup>
-  <ItemGroup>
-    <Compile Include="src/TourManagement.Domain/**/*.cs" />
-    <Compile Include="src/TourManagement.Application/**/*.cs" />
-    <Compile Include="src/TourManagement.Infrastructure/**/*.cs" />
-    <Compile Include="src/TourManagement.Web/**/*.cs" />
-  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.0" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.0" />

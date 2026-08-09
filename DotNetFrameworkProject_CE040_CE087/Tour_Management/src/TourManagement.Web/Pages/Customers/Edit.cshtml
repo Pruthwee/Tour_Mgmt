@@ -1,0 +1,4 @@
+@page "{id:int}"
+@model TourManagement.Web.Pages.Customers.EditModel
+@{ ViewData["Title"] = "Edit Customer"; }
+<h1>Edit Customer</h1><form method="post"><partial name="_CustomerForm" for="Input" /><button class="btn btn-primary">Save</button> <a asp-page="Index" class="btn btn-secondary">Cancel</a></form>

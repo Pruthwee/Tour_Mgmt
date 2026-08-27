@@ -160,3 +160,4 @@
 /modernize-data/studio-data/TNT1001/APP883829/transformed-code/130/studio-workspace/Tour_Mgmt-rahcpm/tests/Tour_Management.UnitTests/obj/Debug/net8.0/Tour_Management.UnitTests.pdb
 /modernize-data/studio-data/TNT1001/APP883829/transformed-code/130/studio-workspace/Tour_Mgmt-rahcpm/tests/Tour_Management.UnitTests/obj/Debug/net8.0/Tour_Management.UnitTests.genruntimeconfig.cache
 /modernize-data/studio-data/TNT1001/APP883829/transformed-code/130/studio-workspace/Tour_Mgmt-rahcpm/tests/Tour_Management.UnitTests/obj/Debug/net8.0/ref/Tour_Management.UnitTests.dll
+/modernize-data/studio-data/TNT1001/APP883829/transformed-code/130/studio-workspace/Tour_Mgmt-rahcpm/tests/Tour_Management.UnitTests/bin/Debug/net8.0/CoverletSourceRootsMapping_Tour_Management.UnitTests

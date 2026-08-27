@@ -1,0 +1,6 @@
+/modernize-data/studio-data/TNT1001/APP883829/transformed-code/130/studio-workspace/Tour_Mgmt-rahcpm/Tests/obj/Debug/net8.0/Tour_Management.Tests.csproj.AssemblyReference.cache
+/modernize-data/studio-data/TNT1001/APP883829/transformed-code/130/studio-workspace/Tour_Mgmt-rahcpm/Tests/obj/Debug/net8.0/Tour_Management.Tests.GeneratedMSBuildEditorConfig.editorconfig
+/modernize-data/studio-data/TNT1001/APP883829/transformed-code/130/studio-workspace/Tour_Mgmt-rahcpm/Tests/obj/Debug/net8.0/Tour_Management.Tests.AssemblyInfoInputs.cache
+/modernize-data/studio-data/TNT1001/APP883829/transformed-code/130/studio-workspace/Tour_Mgmt-rahcpm/Tests/obj/Debug/net8.0/Tour_Management.Tests.AssemblyInfo.cs
+/modernize-data/studio-data/TNT1001/APP883829/transformed-code/130/studio-workspace/Tour_Mgmt-rahcpm/Tests/obj/Debug/net8.0/Tour_Management.Tests.csproj.CoreCompileInputs.cache
+/modernize-data/studio-data/TNT1001/APP883829/transformed-code/130/studio-workspace/Tour_Mgmt-rahcpm/Tests/obj/Debug/net8.0/Tour_Management.Tests.sourcelink.json

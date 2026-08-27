@@ -10,7 +10,7 @@ public class UserInfoConfiguration : IEntityTypeConfiguration<UserInfo>
     /// <inheritdoc/>
     public void Configure(EntityTypeBuilder<UserInfo> builder)
     {
-        builder.ToTable("UserInfo");
+        builder.ToTable("UserInfo", t => t.HasCheckConstraint("CK_Gender", "[Gender] = 'Male' OR [Gender] = 'Female'"));
         builder.HasKey(u => u.Email);
         builder.Property(u => u.Email).HasMaxLength(50).IsRequired();
         builder.Property(u => u.FirstName).HasMaxLength(50).IsRequired();
@@ -23,8 +23,6 @@ public class UserInfoConfiguration : IEntityTypeConfiguration<UserInfo>
         builder.Property(u => u.State).HasMaxLength(50).IsRequired();
         builder.Property(u => u.Role).HasMaxLength(20).HasDefaultValue("User");
         builder.Property(u => u.CreatedDate).HasDefaultValueSql("GETUTCDATE()");
-
-        builder.HasCheckConstraint("CK_Gender", "[Gender] = 'Male' OR [Gender] = 'Female'");
 
         builder.HasMany(u => u.Bookings)
                .WithOne(b => b.User)

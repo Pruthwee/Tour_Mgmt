@@ -44,6 +44,7 @@
           "Tour_Management.Application": "1.0.0",
           "Tour_Management.Domain": "1.0.0",
           "Tour_Management.Infrastructure": "1.0.0",
+          "coverlet.msbuild": "10.0.1",
           "xunit": "2.6.6",
           "xunit.runner.visualstudio": "2.5.6",
           "Microsoft.AspNetCore.Antiforgery": "8.0.0.0",
@@ -449,6 +450,7 @@
           "lib/net6.0/Castle.Core.dll": {}
         }
       },
+      "coverlet.msbuild/10.0.1": {},
       "FluentAssertions/6.12.0": {
         "dependencies": {
           "System.Configuration.ConfigurationManager": "6.0.1"
@@ -3488,6 +3490,13 @@
       "sha512": "sha512-rpYtIczkzGpf+EkZgDr9CClTdemhsrwA/W5hMoPjLkRFnXzH44zDLoovXeKtmxb1ykXK9aJVODSpiJml8CTw2g==",
       "path": "castle.core/5.1.1",
       "hashPath": "castle.core.5.1.1.nupkg.sha512"
+    },
+    "coverlet.msbuild/10.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-kb5kBe1HioGuH+ZDKysv/oAO9cCUW2yxtrGrRBZp/dIij5f011OfC4XiNMayZ8bGfOv2+n2ocPkaJIGppAZDEg==",
+      "path": "coverlet.msbuild/10.0.1",
+      "hashPath": "coverlet.msbuild.10.0.1.nupkg.sha512"
     },
     "FluentAssertions/6.12.0": {
       "type": "package",

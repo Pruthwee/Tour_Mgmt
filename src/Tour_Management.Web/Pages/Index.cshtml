@@ -1,0 +1,45 @@
+@page
+@model Tour_Management.Web.Pages.IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="jumbotron bg-primary text-white p-5 rounded mb-4">
+    <h1 class="display-4">Welcome to Tour Management</h1>
+    <p class="lead">Discover amazing tours and book your dream vacation today!</p>
+    <a class="btn btn-light btn-lg" asp-page="/Tours/Index">Browse Tours</a>
+    @if (!Model.IsLoggedIn)
+    {
+        <a class="btn btn-outline-light btn-lg ms-2" asp-page="/Account/Register">Register Now</a>
+    }
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card text-center mb-4">
+            <div class="card-body">
+                <h5 class="card-title">🗺️ Explore Tours</h5>
+                <p class="card-text">Browse our wide selection of tour packages to destinations worldwide.</p>
+                <a asp-page="/Tours/Index" class="btn btn-primary">View Tours</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center mb-4">
+            <div class="card-body">
+                <h5 class="card-title">📅 Easy Booking</h5>
+                <p class="card-text">Book your tour in just a few clicks with our simple booking system.</p>
+                <a asp-page="/Account/Register" class="btn btn-success">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card text-center mb-4">
+            <div class="card-body">
+                <h5 class="card-title">👤 My Bookings</h5>
+                <p class="card-text">View and manage all your tour bookings in one place.</p>
+                <a asp-page="/Bookings/MyBookings" class="btn btn-info">My Bookings</a>
+            </div>
+        </div>
+    </div>
+</div>

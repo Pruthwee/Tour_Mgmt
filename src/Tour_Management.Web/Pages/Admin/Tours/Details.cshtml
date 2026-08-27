@@ -1,0 +1,45 @@
+@page "{id:int}"
+@model Tour_Management.Web.Pages.Admin.Tours.DetailsModel
+@{
+    ViewData["Title"] = "Tour Details";
+}
+
+<h2>Tour Details</h2>
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a asp-page="/Admin/Tours/Index">Tours</a></li>
+        <li class="breadcrumb-item active">Details</li>
+    </ol>
+</nav>
+
+@if (Model.Tour != null)
+{
+    <div class="card shadow">
+        <div class="card-body">
+            <dl class="row">
+                <dt class="col-sm-3">Tour ID</dt>
+                <dd class="col-sm-9">@Model.Tour.TourId</dd>
+                <dt class="col-sm-3">Tour Name</dt>
+                <dd class="col-sm-9">@Model.Tour.TourName</dd>
+                <dt class="col-sm-3">Place</dt>
+                <dd class="col-sm-9">@Model.Tour.Place</dd>
+                <dt class="col-sm-3">Days</dt>
+                <dd class="col-sm-9">@Model.Tour.Days</dd>
+                <dt class="col-sm-3">Price</dt>
+                <dd class="col-sm-9">₹@Model.Tour.Price.ToString("N0")</dd>
+                <dt class="col-sm-3">Locations</dt>
+                <dd class="col-sm-9">@Model.Tour.Locations</dd>
+                <dt class="col-sm-3">Tour Info</dt>
+                <dd class="col-sm-9">@Model.Tour.TourInfo</dd>
+                <dt class="col-sm-3">Active</dt>
+                <dd class="col-sm-9">@(Model.Tour.IsActive ? "Yes" : "No")</dd>
+                <dt class="col-sm-3">Created</dt>
+                <dd class="col-sm-9">@Model.Tour.CreatedDate.ToString("dd MMM yyyy HH:mm")</dd>
+            </dl>
+            <div class="d-flex gap-2">
+                <a asp-page="/Admin/Tours/Edit" asp-route-id="@Model.Tour.TourId" class="btn btn-warning">Edit</a>
+                <a asp-page="/Admin/Tours/Index" class="btn btn-outline-secondary">Back</a>
+            </div>
+        </div>
+    </div>
+}

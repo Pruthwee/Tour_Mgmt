@@ -1,0 +1,15 @@
+@page
+@model Tour_Management.Web.Pages.ErrorModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Oops! Something went wrong.</h1>
+    <p>An error occurred while processing your request.</p>
+    @if (Model.RequestId != null)
+    {
+        <p><strong>Request ID:</strong> <code>@Model.RequestId</code></p>
+    }
+    <a asp-page="/Index" class="btn btn-primary">Go Home</a>
+</div>

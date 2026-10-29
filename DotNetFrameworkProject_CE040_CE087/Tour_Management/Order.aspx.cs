@@ -18,7 +18,7 @@ namespace Tour_Management
 
         protected void btn_click(object sender, EventArgs e)
         {
-               SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+               SqlConnection conn = new SqlConnection(Environment.GetEnvironmentVariable("ConnectionStrings__dbconnection"));
                 conn.Open();
                 string insertQuery = "insert into booking(TOUR_NAME,PLACE,Email,FirstName) values(@TOUR_NAME,@PLACE,@Email,@FirstName)";
                 SqlCommand com = new SqlCommand(insertQuery, conn);

@@ -63,6 +63,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="AWSSDK.Core">
+      <HintPath>..\packages\AWSSDK.Core.3.7.302.2\lib\net45\AWSSDK.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="AWSSDK.S3">
+      <HintPath>..\packages\AWSSDK.S3.3.7.305.18\lib\net45\AWSSDK.S3.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -122,6 +128,7 @@
     <Compile Include="DisplayTours.aspx.designer.cs">
       <DependentUpon>DisplayTours.aspx</DependentUpon>
     </Compile>
+    <Compile Include="HealthHandler.cs" />
     <Compile Include="MainProfilePage.aspx.cs">
       <DependentUpon>MainProfilePage.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

@@ -26,7 +26,7 @@
                 <asp:TemplateField HeaderText="pic">
 
                 <ItemTemplate>
-                    <img src="Tour_pics/<%#Eval("pic") %>" style="width:200px;height:200px" />
+                    <img src="<%#(string.IsNullOrEmpty(Environment.GetEnvironmentVariable("TOUR_PICS_BASE_URL")) ? "Tour_pics/" : Environment.GetEnvironmentVariable("TOUR_PICS_BASE_URL")) + Eval("pic") %>" style="width:200px;height:200px" />
                 </ItemTemplate>
                     </asp:TemplateField>
                  <asp:TemplateField>

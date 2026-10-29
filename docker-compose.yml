@@ -1,0 +1,21 @@
+# Local run of the application's own container (Windows containers: Docker Desktop switched to "Windows containers").
+# No database or other infrastructure is started here: the SQL Server and the S3 bucket are reached through environment variables.
+# Required in the shell that runs compose:  ConnectionStrings__dbconnection  (holds the SQL Server credentials)
+services:
+  testing-con-5:
+    image: testing-con-5:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: testing-con-5
+    ports:
+      - "8080:80"
+    environment:
+      ASPNETCORE_ENVIRONMENT: "Production"
+      ConnectionStrings__dbconnection: ${ConnectionStrings__dbconnection:?set ConnectionStrings__dbconnection}
+      S3_BUCKET_NAME: ${S3_BUCKET_NAME:-}
+      AWS_REGION: ${AWS_REGION:-us-east-1}
+      TOUR_PICS_BASE_URL: ${TOUR_PICS_BASE_URL:-}
+    volumes:
+      - ./logs:C:/inetpub/logs/LogFiles
+    restart: unless-stopped

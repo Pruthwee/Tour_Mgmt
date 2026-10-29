@@ -22,7 +22,7 @@ namespace Tour_Management
             
                
 
-                SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+                SqlConnection conn = new SqlConnection(Environment.GetEnvironmentVariable("ConnectionStrings__dbconnection"));
                 conn.Open();
                 string checkPasswordQuery = "select password from Userinfo where password='" + txtPassword.Text + "' and email = '" + txtEmail.Text + "'";
                 SqlCommand passComm = new SqlCommand(checkPasswordQuery, conn);

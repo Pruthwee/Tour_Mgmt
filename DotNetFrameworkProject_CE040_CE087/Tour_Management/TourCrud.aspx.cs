@@ -22,7 +22,7 @@ namespace Tour_Management
         }
         public void refreshdata()
         {
-            SqlConnection conn = new SqlConnection(ConfigurationManager.ConnectionStrings["dbconnection"].ConnectionString);
+            SqlConnection conn = new SqlConnection(Environment.GetEnvironmentVariable("ConnectionStrings__dbconnection"));
             conn.Open();
             string insertQuery = "select * from Tour";
             SqlCommand com = new SqlCommand(insertQuery, conn);
